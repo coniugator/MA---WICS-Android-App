@@ -1,8 +1,7 @@
 # ma
 WICS HackOverflow 2018
 
-
- public class story {
+public class story {
         private String storyContent;
         private String title;
         private ArrayList<String> tags;
@@ -33,4 +32,23 @@ WICS HackOverflow 2018
             this.ID = index;
         }
 
+        public String getTitle(){
+            return this.title;
+        }
+
+        public String getStory(){
+            return this.storyContent;
+        }
+
+        public String getDate() {
+            return this.date;
+        }
+
+        public String storyTags(){
+            String tagList = null;
+            for (int i = 0; i < this.tags.size(); i++) {
+                tagList += (this.tags.get(i) + ',' + ' ');
+            }
+            return tagList;
+        }
     }
